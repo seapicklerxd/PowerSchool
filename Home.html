@@ -1,0 +1,261 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Powerschool | Games</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+}
+
+header {
+    background: #17243a;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #293950;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #60a5fa;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: white;
+}
+
+.header-text {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 45px auto;
+    padding: 0 25px;
+}
+
+.welcome {
+    margin-bottom: 30px;
+}
+
+.welcome h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.welcome p {
+    color: #94a3b8;
+}
+
+.search {
+    width: 100%;
+    padding: 15px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 9px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 30px;
+}
+
+.search:focus {
+    border-color: #60a5fa;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.game {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.game:hover {
+    transform: translateY(-5px);
+    background: #263750;
+    border-color: #60a5fa;
+}
+
+.game-icon {
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.game h3 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+@media (max-width: 800px) {
+    .games-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .games-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">Power<span>school</span></div>
+    <div class="header-text">Game Library</div>
+</header>
+
+<div class="container">
+
+    <div class="welcome">
+        <h1>Game Library</h1>
+        <p>Choose a game and start playing.</p>
+    </div>
+
+    <input
+        type="text"
+        class="search"
+        id="search"
+        placeholder="Search games..."
+        oninput="searchGames()"
+    >
+
+    <div class="games-grid" id="games">
+
+        <a href="games/game1.html" class="game">
+            <div class="game-icon">🏀</div>
+            <h3>Basketball Stars</h3>
+        </a>
+
+        <a href="games/game2.html" class="game">
+            <div class="game-icon">🚗</div>
+            <h3>Racing Game</h3>
+        </a>
+
+        <a href="games/game3.html" class="game">
+            <div class="game-icon">🧩</div>
+            <h3>2048</h3>
+        </a>
+
+        <a href="games/game4.html" class="game">
+            <div class="game-icon">🐍</div>
+            <h3>Snake</h3>
+        </a>
+
+        <a href="games/game5.html" class="game">
+            <div class="game-icon">🏓</div>
+            <h3>Ping Pong</h3>
+        </a>
+
+        <a href="games/game6.html" class="game">
+            <div class="game-icon">🎮</div>
+            <h3>Platformer</h3>
+        </a>
+
+        <a href="games/game7.html" class="game">
+            <div class="game-icon">♟️</div>
+            <h3>Chess</h3>
+        </a>
+
+        <a href="games/game8.html" class="game">
+            <div class="game-icon">🧱</div>
+            <h3>Brick Breaker</h3>
+        </a>
+
+        <a href="games/game9.html" class="game">
+            <div class="game-icon">🚀</div>
+            <h3>Space Shooter</h3>
+        </a>
+
+        <a href="games/game10.html" class="game">
+            <div class="game-icon">🧠</div>
+            <h3>Memory Game</h3>
+        </a>
+
+        <a href="games/game11.html" class="game">
+            <div class="game-icon">⚽</div>
+            <h3>Soccer</h3>
+        </a>
+
+        <a href="games/game12.html" class="game">
+            <div class="game-icon">🏎️</div>
+            <h3>Drift Racing</h3>
+        </a>
+
+        <a href="games/game13.html" class="game">
+            <div class="game-icon">🟦</div>
+            <h3>Tetris</h3>
+        </a>
+
+        <a href="games/game14.html" class="game">
+            <div class="game-icon">🎯</div>
+            <h3>Target Practice</h3>
+        </a>
+
+        <a href="games/game15.html" class="game">
+            <div class="game-icon">🐦</div>
+            <h3>Flappy Bird</h3>
+        </a>
+
+        <a href="games/game16.html" class="game">
+            <div class="game-icon">🎲</div>
+            <h3>Dice Game</h3>
+        </a>
+
+    </div>
+</div>
+
+<footer>
+    Powerschool &copy; 2026
+</footer>
+
+<script>
+function searchGames() {
+    const query = document.getElementById("search").value.toLowerCase();
+    const games = document.querySelectorAll(".game");
+
+    games.forEach(game => {
+        const name = game.innerText.toLowerCase();
+        game.style.display = name.includes(query) ? "" : "none";
+    });
+}
+</script>
+
+</body>
+</html>
